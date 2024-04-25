@@ -22,7 +22,7 @@ plugins {
 }
 
 android {
-    namespace = "org.jdc.template"
+    namespace = "org.blubz.template"
 
     compileSdk = AppInfo.AndroidSdk.COMPILE
 
@@ -331,7 +331,7 @@ koverReport {
                 "*codegen*",
 
                 // App Specific
-                "org.jdc.template.ui",
+                "org.blubz.template.ui",
             )
 
             classes(

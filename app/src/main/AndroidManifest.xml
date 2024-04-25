@@ -64,19 +64,19 @@
             tools:node="merge"
             >
             <meta-data
-                android:name="org.jdc.template.startup.NotificationInitializer"
+                android:name="org.blubz.fitsync.startup.NotificationInitializer"
                 android:value="androidx.startup"
                 />
             <meta-data
-                android:name="org.jdc.template.startup.LoggingInitializer"
+                android:name="org.blubz.fitsync.startup.LoggingInitializer"
                 android:value="androidx.startup"
                 />
             <meta-data
-                android:name="org.jdc.template.startup.AppUpgradeInitializer"
+                android:name="org.blubz.fitsync.startup.AppUpgradeInitializer"
                 android:value="androidx.startup"
                 />
             <meta-data
-                android:name="org.jdc.template.startup.RemoteConfigInitializer"
+                android:name="org.blubz.fitsync.startup.RemoteConfigInitializer"
                 android:value="androidx.startup"
                 />
         </provider>
