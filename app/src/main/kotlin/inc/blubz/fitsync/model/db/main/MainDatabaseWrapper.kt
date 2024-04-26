@@ -5,8 +5,8 @@ import androidx.room.Room
 import dagger.hilt.android.qualifiers.ApplicationContext
 import org.dbtools.android.room.CloseableDatabaseWrapper
 import org.dbtools.android.room.android.AndroidSQLiteOpenHelperFactory
-import org.blubz.fitsync.model.db.main.migration.MainMigration2
-import org.blubz.fitsync.model.db.main.migration.MainMigration3
+import inc.blubz.fitsync.model.db.main.migration.MainMigration2
+import inc.blubz.fitsync.model.db.main.migration.MainMigration3
 import javax.inject.Inject
 import javax.inject.Singleton
 

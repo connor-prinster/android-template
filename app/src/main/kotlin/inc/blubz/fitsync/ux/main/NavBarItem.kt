@@ -6,11 +6,11 @@ import androidx.compose.material.icons.filled.Info
 import androidx.compose.material.icons.filled.People
 import androidx.compose.material.icons.outlined.Info
 import androidx.compose.ui.graphics.vector.ImageVector
-import org.blubz.fitsync.R
+import inc.blubz.fitsync.R
 import inc.blubz.fitsync.ui.compose.icons.google.outlined.People
 import inc.blubz.fitsync.ui.navigation.NavRoute
-import org.blubz.fitsync.ux.about.AboutRoute
-import org.blubz.fitsync.ux.directory.DirectoryRoute
+import inc.blubz.fitsync.ux.about.AboutRoute
+import inc.blubz.fitsync.ux.directory.DirectoryRoute
 
 enum class NavBarItem(
     val unselectedImageVector: ImageVector,

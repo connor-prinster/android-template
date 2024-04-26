@@ -13,7 +13,7 @@ import androidx.compose.runtime.getValue
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import dagger.hilt.android.AndroidEntryPoint
-import org.blubz.fitsync.model.domain.type.DisplayThemeType
+import inc.blubz.fitsync.model.domain.type.DisplayThemeType
 import inc.blubz.fitsync.ui.theme.AppTheme
 
 @AndroidEntryPoint

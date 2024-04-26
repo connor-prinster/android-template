@@ -5,12 +5,12 @@ import io.mockk.coEvery
 import io.mockk.every
 import io.mockk.mockk
 import kotlinx.coroutines.flow.flowOf
-import org.blubz.fitsync.model.db.main.directoryitem.DirectoryItemEntityView
-import org.blubz.fitsync.model.domain.Individual
-import org.blubz.fitsync.model.domain.inline.FirstName
-import org.blubz.fitsync.model.domain.inline.IndividualId
-import org.blubz.fitsync.model.domain.inline.LastName
-import org.blubz.fitsync.model.repository.IndividualRepository
+import inc.blubz.fitsync.model.db.main.directoryitem.DirectoryItemEntityView
+import inc.blubz.fitsync.model.domain.Individual
+import inc.blubz.fitsync.model.domain.inline.FirstName
+import inc.blubz.fitsync.model.domain.inline.IndividualId
+import inc.blubz.fitsync.model.domain.inline.LastName
+import inc.blubz.fitsync.model.repository.IndividualRepository
 
 fun mockApplication(): Application {
     val mockApplication = mockk<Application>()

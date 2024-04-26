@@ -7,7 +7,7 @@ import android.os.Build
 import androidx.annotation.StringRes
 import androidx.core.app.NotificationManagerCompat
 import androidx.core.content.getSystemService
-import org.blubz.fitsync.R
+import inc.blubz.fitsync.R
 
 enum class NotificationChannels constructor(
     val channelId: String,

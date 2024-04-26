@@ -4,16 +4,16 @@ import androidx.compose.ui.res.stringResource
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.launch
-import org.blubz.fitsync.R
-import org.blubz.fitsync.analytics.Analytics
-import org.blubz.fitsync.model.domain.inline.IndividualId
-import org.blubz.fitsync.model.repository.IndividualRepository
+import inc.blubz.fitsync.R
+import inc.blubz.fitsync.analytics.Analytics
+import inc.blubz.fitsync.model.domain.inline.IndividualId
+import inc.blubz.fitsync.model.repository.IndividualRepository
 import inc.blubz.fitsync.ui.compose.dialog.DialogUiState
 import inc.blubz.fitsync.ui.compose.dialog.dismissDialog
 import inc.blubz.fitsync.ui.compose.dialog.showMessageDialog
 import inc.blubz.fitsync.ui.navigation.NavigationAction
-import org.blubz.fitsync.util.ext.stateInDefault
-import org.blubz.fitsync.ux.individualedit.IndividualEditRoute
+import inc.blubz.fitsync.util.ext.stateInDefault
+import inc.blubz.fitsync.ux.individualedit.IndividualEditRoute
 import javax.inject.Inject
 
 class GetIndividualUiStateUseCase

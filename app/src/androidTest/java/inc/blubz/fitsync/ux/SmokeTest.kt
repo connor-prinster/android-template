@@ -12,7 +12,7 @@ import inc.blubz.fitsync.ux.individual.IndividualEditScreenFields
 import inc.blubz.fitsync.ux.main.MainActivity
 import inc.blubz.fitsync.ux.main.MainViewModel
 import kotlinx.coroutines.runBlocking
-import org.jdc.template.R
+import inc.blubz.fitsync.R
 import org.junit.Rule
 import org.junit.Test
 

@@ -7,14 +7,14 @@ import co.touchlab.kermit.Logger
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.combine
 import kotlinx.coroutines.launch
-import org.blubz.fitsync.domain.individual.CreateIndividualTestDataUseCase
-import org.blubz.fitsync.model.domain.type.DisplayThemeType
-import org.blubz.fitsync.model.repository.SettingsRepository
+import inc.blubz.fitsync.domain.individual.CreateIndividualTestDataUseCase
+import inc.blubz.fitsync.model.domain.type.DisplayThemeType
+import inc.blubz.fitsync.model.repository.SettingsRepository
 import inc.blubz.fitsync.ui.navigation.DefaultNavBarConfig
 import inc.blubz.fitsync.ui.navigation.ViewModelNavBar
 import inc.blubz.fitsync.ui.navigation.ViewModelNavBarImpl
-import org.blubz.fitsync.util.ext.stateInDefault
-import org.blubz.fitsync.work.WorkScheduler
+import inc.blubz.fitsync.util.ext.stateInDefault
+import inc.blubz.fitsync.work.WorkScheduler
 import javax.inject.Inject
 
 @HiltViewModel

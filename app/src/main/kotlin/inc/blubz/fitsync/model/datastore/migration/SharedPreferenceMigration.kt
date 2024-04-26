@@ -3,7 +3,7 @@ package inc.blubz.fitsync.model.datastore.migration
 import androidx.datastore.migrations.SharedPreferencesView
 import androidx.datastore.preferences.core.Preferences
 import co.touchlab.kermit.Logger
-import org.blubz.fitsync.model.datastore.DevicePreferenceDataSource
+import inc.blubz.fitsync.model.datastore.DevicePreferenceDataSource
 
 object SharedPreferenceMigration {
     fun migrateSharedPreferences(sharedPrefs: SharedPreferencesView, currentData: Preferences): Preferences {

@@ -1,10 +1,10 @@
 package inc.blubz.fitsync.model.domain
 
 import kotlinx.datetime.Clock
-import org.blubz.fitsync.model.domain.inline.CreatedTime
-import org.blubz.fitsync.model.domain.inline.HouseholdId
-import org.blubz.fitsync.model.domain.inline.LastModifiedTime
-import org.blubz.fitsync.model.domain.inline.LastName
+import inc.blubz.fitsync.model.domain.inline.CreatedTime
+import inc.blubz.fitsync.model.domain.inline.HouseholdId
+import inc.blubz.fitsync.model.domain.inline.LastModifiedTime
+import inc.blubz.fitsync.model.domain.inline.LastName
 import java.util.UUID
 
 data class Household(

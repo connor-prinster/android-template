@@ -5,8 +5,8 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.compose.rememberNavController
 import inc.blubz.fitsync.ui.navigation.HandleNavBarNavigation
-import org.blubz.fitsync.util.ext.requireActivity
-import org.blubz.fitsync.ux.NavGraph
+import inc.blubz.fitsync.util.ext.requireActivity
+import inc.blubz.fitsync.ux.NavGraph
 
 @Composable
 fun MainScreen(

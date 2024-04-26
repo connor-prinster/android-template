@@ -9,12 +9,12 @@ import kotlinx.coroutines.Job
 import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.test.runTest
-import org.blubz.fitsync.ux.mockIndividualRepository
-import org.blubz.fitsync.model.domain.inline.IndividualId
+import inc.blubz.fitsync.ux.mockIndividualRepository
+import inc.blubz.fitsync.model.domain.inline.IndividualId
 import inc.blubz.fitsync.ui.navigation.NavigationAction
-import org.blubz.fitsync.ux.individual.IndividualRoute
-import org.blubz.fitsync.ux.individualedit.IndividualEditRoute
-import org.blubz.fitsync.ux.settings.SettingsRoute
+import inc.blubz.fitsync.ux.individual.IndividualRoute
+import inc.blubz.fitsync.ux.individualedit.IndividualEditRoute
+import inc.blubz.fitsync.ux.settings.SettingsRoute
 import kotlin.test.Test
 
 class GetDirectoryUiStateUseCaseTest {

@@ -4,13 +4,13 @@ import androidx.room.Database
 import androidx.room.RoomDatabase
 import androidx.room.TypeConverters
 import org.dbtools.android.room.DatabaseViewQuery
-import org.blubz.fitsync.model.db.converter.KotlinDateTimeTextConverter
-import org.blubz.fitsync.model.db.main.directoryitem.DirectoryItemDao
-import org.blubz.fitsync.model.db.main.directoryitem.DirectoryItemEntityView
-import org.blubz.fitsync.model.db.main.household.HouseholdDao
-import org.blubz.fitsync.model.db.main.household.HouseholdEntity
-import org.blubz.fitsync.model.db.main.individual.IndividualDao
-import org.blubz.fitsync.model.db.main.individual.IndividualEntity
+import inc.blubz.fitsync.model.db.converter.KotlinDateTimeTextConverter
+import inc.blubz.fitsync.model.db.main.directoryitem.DirectoryItemDao
+import inc.blubz.fitsync.model.db.main.directoryitem.DirectoryItemEntityView
+import inc.blubz.fitsync.model.db.main.household.HouseholdDao
+import inc.blubz.fitsync.model.db.main.household.HouseholdEntity
+import inc.blubz.fitsync.model.db.main.individual.IndividualDao
+import inc.blubz.fitsync.model.db.main.individual.IndividualEntity
 
 @Database(
     entities = [

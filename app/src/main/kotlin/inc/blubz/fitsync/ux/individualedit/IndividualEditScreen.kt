@@ -17,8 +17,8 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
 import kotlinx.coroutines.flow.MutableStateFlow
-import org.blubz.fitsync.R
-import org.blubz.fitsync.model.domain.type.IndividualType
+import inc.blubz.fitsync.R
+import inc.blubz.fitsync.model.domain.type.IndividualType
 import inc.blubz.fitsync.ui.compose.PreviewDefault
 import inc.blubz.fitsync.ui.compose.appbar.AppBarMenu
 import inc.blubz.fitsync.ui.compose.appbar.AppBarMenuItem
@@ -31,7 +31,7 @@ import inc.blubz.fitsync.ui.compose.form.TimeClickableTextField
 import inc.blubz.fitsync.ui.compose.util.formKeyEventHandler
 import inc.blubz.fitsync.ui.navigation.HandleNavigation
 import inc.blubz.fitsync.ui.theme.AppTheme
-import org.blubz.fitsync.ux.MainAppScaffoldWithNavBar
+import inc.blubz.fitsync.ux.MainAppScaffoldWithNavBar
 
 @Composable
 fun IndividualEditScreen(

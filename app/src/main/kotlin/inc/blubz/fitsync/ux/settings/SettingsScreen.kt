@@ -9,11 +9,11 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.res.stringResource
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.navigation.NavController
-import org.blubz.fitsync.R
+import inc.blubz.fitsync.R
 import inc.blubz.fitsync.ui.compose.dialog.HandleDialogUiState
 import inc.blubz.fitsync.ui.compose.setting.Setting
 import inc.blubz.fitsync.ui.navigation.WorkManagerStatusRoute
-import org.blubz.fitsync.ux.MainAppScaffoldWithNavBar
+import inc.blubz.fitsync.ux.MainAppScaffoldWithNavBar
 
 @Composable
 fun SettingsScreen(

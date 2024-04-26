@@ -10,7 +10,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:292666345594:android:79471cfe9138c223",
         "android_client_info": {
-          "package_name": "org.jdc.template"
+          "package_name": "inc.blubz.fitsync"
         }
       },
       "oauth_client": [
@@ -18,7 +18,7 @@
           "client_id": "292666345594-go9lvjj2idjrv26tctb6m1fdi36m6bgn.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "org.jdc.template",
+            "package_name": "inc.blubz.fitsync",
             "certificate_hash": "b42d9b120697693435747b1f51f10fd8eabfe205"
           }
         },
@@ -50,7 +50,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:292666345594:android:21903887d2d5200065d3c3",
         "android_client_info": {
-          "package_name": "org.jdc.template.alpha"
+          "package_name": "inc.blubz.fitsync.alpha"
         }
       },
       "oauth_client": [
@@ -58,7 +58,7 @@
           "client_id": "292666345594-agudcds4pufpjap8ch3kdsu8747l61d1.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "org.jdc.template.alpha",
+            "package_name": "inc.blubz.fitsync.alpha",
             "certificate_hash": "b42d9b120697693435747b1f51f10fd8eabfe205"
           }
         },
@@ -90,7 +90,7 @@
       "client_info": {
         "mobilesdk_app_id": "1:292666345594:android:d99c39cc0cb61625",
         "android_client_info": {
-          "package_name": "org.jdc.template.dev"
+          "package_name": "inc.blubz.fitsync.dev"
         }
       },
       "oauth_client": [
@@ -98,7 +98,7 @@
           "client_id": "292666345594-qfeer3cqm6pp8efmfh39v5ijftjkpq52.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
-            "package_name": "org.jdc.template.dev",
+            "package_name": "inc.blubz.fitsync.dev",
             "certificate_hash": "b42d9b120697693435747b1f51f10fd8eabfe205"
           }
         },

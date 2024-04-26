@@ -1,9 +1,9 @@
 package inc.blubz.fitsync.model.db.main.directoryitem
 
 import androidx.room.DatabaseView
-import org.blubz.fitsync.model.domain.inline.FirstName
-import org.blubz.fitsync.model.domain.inline.IndividualId
-import org.blubz.fitsync.model.domain.inline.LastName
+import inc.blubz.fitsync.model.domain.inline.FirstName
+import inc.blubz.fitsync.model.domain.inline.IndividualId
+import inc.blubz.fitsync.model.domain.inline.LastName
 
 @DatabaseView(
     viewName = DirectoryItemEntityView.VIEW_NAME,

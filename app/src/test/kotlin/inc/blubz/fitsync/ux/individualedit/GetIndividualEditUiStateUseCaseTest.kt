@@ -10,9 +10,9 @@ import kotlinx.coroutines.cancel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.test.runTest
 import inc.blubz.fitsync.ui.navigation.NavigationAction
-import org.blubz.fitsync.ux.TestIndividuals
-import org.blubz.fitsync.ux.mockApplication
-import org.blubz.fitsync.ux.mockIndividualRepository
+import inc.blubz.fitsync.ux.TestIndividuals
+import inc.blubz.fitsync.ux.mockApplication
+import inc.blubz.fitsync.ux.mockIndividualRepository
 import kotlin.test.Test
 
 class GetIndividualEditUiStateUseCaseTest {

@@ -4,8 +4,8 @@ import co.touchlab.kermit.Logger
 import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.runBlocking
 import inc.blubz.fitsync.BuildConfig
-import org.blubz.fitsync.inject.IoDispatcher
-import org.blubz.fitsync.model.repository.SettingsRepository
+import inc.blubz.fitsync.inject.IoDispatcher
+import inc.blubz.fitsync.model.repository.SettingsRepository
 import javax.inject.Inject
 
 class AppUpgrade

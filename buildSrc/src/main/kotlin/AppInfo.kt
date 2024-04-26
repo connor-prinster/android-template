@@ -1,7 +1,7 @@
 @Suppress("MemberVisibilityCanBePrivate")
 
 object AppInfo {
-    const val APPLICATION_ID = "org.blubz.fitsync"
+    const val APPLICATION_ID = "inc.blubz.fitsync"
 
     // Manifest version information
     object Version {

@@ -16,10 +16,10 @@ import io.mockk.every
 import io.mockk.mockk
 import kotlinx.serialization.json.Json
 import okhttp3.OkHttpClient
-import org.blubz.fitsync.TestFilesystem
-import org.blubz.fitsync.model.webservice.KtorClientDefaults.defaultSetup
-import org.blubz.fitsync.model.webservice.ResponseTimePlugin
-import org.blubz.fitsync.model.webservice.colors.ColorService
+import inc.blubz.fitsync.TestFilesystem
+import inc.blubz.fitsync.model.webservice.KtorClientDefaults.defaultSetup
+import inc.blubz.fitsync.model.webservice.ResponseTimePlugin
+import inc.blubz.fitsync.model.webservice.colors.ColorService
 import java.io.File
 import java.util.concurrent.TimeUnit
 import javax.inject.Singleton

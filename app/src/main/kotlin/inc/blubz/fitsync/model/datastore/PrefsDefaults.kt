@@ -1,7 +1,7 @@
 package inc.blubz.fitsync.model.datastore
 
 import android.os.Build
-import org.blubz.fitsync.model.domain.type.DisplayThemeType
+import inc.blubz.fitsync.model.domain.type.DisplayThemeType
 
 object PrefsDefaults {
     val SYSTEM_THEME_TYPE = getSystemThemeTypeDefault()

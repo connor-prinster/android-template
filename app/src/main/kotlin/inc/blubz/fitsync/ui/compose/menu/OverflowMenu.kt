@@ -26,7 +26,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
-import org.blubz.fitsync.R
+import inc.blubz.fitsync.R
 
 @Composable
 fun OverflowMenu(

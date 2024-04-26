@@ -7,7 +7,7 @@ import androidx.work.WorkerParameters
 import co.touchlab.kermit.Logger
 import dagger.assisted.Assisted
 import dagger.assisted.AssistedInject
-import org.blubz.fitsync.model.config.RemoteConfig
+import inc.blubz.fitsync.model.config.RemoteConfig
 
 @HiltWorker
 class RemoteConfigSyncWorker

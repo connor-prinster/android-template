@@ -15,9 +15,9 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
 import inc.blubz.fitsync.BuildConfig
-import org.blubz.fitsync.SuppressCoverage
-import org.blubz.fitsync.inject.ApplicationScope
-import org.blubz.fitsync.model.repository.SettingsRepository
+import inc.blubz.fitsync.SuppressCoverage
+import inc.blubz.fitsync.inject.ApplicationScope
+import inc.blubz.fitsync.model.repository.SettingsRepository
 import java.util.concurrent.TimeUnit
 import javax.inject.Inject
 import javax.inject.Singleton

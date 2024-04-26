@@ -1,12 +1,12 @@
 package inc.blubz.fitsync.ux.directory
 
 import kotlinx.coroutines.CoroutineScope
-import org.blubz.fitsync.model.repository.IndividualRepository
+import inc.blubz.fitsync.model.repository.IndividualRepository
 import inc.blubz.fitsync.ui.navigation.NavigationAction
-import org.blubz.fitsync.util.ext.stateInDefault
-import org.blubz.fitsync.ux.individual.IndividualRoute
-import org.blubz.fitsync.ux.individualedit.IndividualEditRoute
-import org.blubz.fitsync.ux.settings.SettingsRoute
+import inc.blubz.fitsync.util.ext.stateInDefault
+import inc.blubz.fitsync.ux.individual.IndividualRoute
+import inc.blubz.fitsync.ux.individualedit.IndividualEditRoute
+import inc.blubz.fitsync.ux.settings.SettingsRoute
 import javax.inject.Inject
 
 class GetDirectoryUiStateUseCase

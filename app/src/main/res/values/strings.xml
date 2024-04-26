@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" standalone="no"?>
 <resources xmlns:its="http://www.w3.org/2005/11/its" its:version="1.0">
     <!-- MyApplication -->
-    <string name="app_name">Android Template</string>
-    <string name="app_launcher_name">Template</string>
+    <string name="app_name">FitSync</string>
+    <string name="app_launcher_name">FitSync</string>
 
     <!-- General -->
     <string name="about">About</string>
@@ -54,7 +54,7 @@
     <string name="head">Head</string>
     <string name="spouse">Spouse</string>
     <string name="child">Child</string>
-    <string name="unkown">Unknown</string>
+    <string name="unknown">Unknown</string>
     <string name="available">Available</string>
     <string name="individual_type_requires_last_name">Children must supply a last name</string>
 </resources>

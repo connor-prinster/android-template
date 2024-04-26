@@ -6,7 +6,7 @@ import androidx.room.OnConflictStrategy
 import androidx.room.Query
 import kotlinx.coroutines.flow.Flow
 import kotlinx.datetime.Instant
-import org.blubz.fitsync.model.domain.inline.IndividualId
+import inc.blubz.fitsync.model.domain.inline.IndividualId
 
 @Dao
 interface IndividualDao {

@@ -4,10 +4,10 @@ import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.launch
-import org.blubz.fitsync.inject.ApplicationScope
-import org.blubz.fitsync.model.domain.type.DisplayThemeType
-import org.blubz.fitsync.model.datastore.DevicePreferenceDataSource
-import org.blubz.fitsync.model.datastore.UserPreferenceDataSource
+import inc.blubz.fitsync.inject.ApplicationScope
+import inc.blubz.fitsync.model.domain.type.DisplayThemeType
+import inc.blubz.fitsync.model.datastore.DevicePreferenceDataSource
+import inc.blubz.fitsync.model.datastore.UserPreferenceDataSource
 import javax.inject.Inject
 import javax.inject.Singleton
 

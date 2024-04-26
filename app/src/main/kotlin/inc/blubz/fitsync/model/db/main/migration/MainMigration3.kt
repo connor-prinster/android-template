@@ -4,7 +4,7 @@ import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 import org.dbtools.android.room.ext.createAllViews
 import org.dbtools.android.room.ext.dropAllViews
-import org.blubz.fitsync.model.db.main.MainDatabase
+import inc.blubz.fitsync.model.db.main.MainDatabase
 
 class MainMigration3: Migration(2, 3) {
     override fun migrate(database: SupportSQLiteDatabase) {

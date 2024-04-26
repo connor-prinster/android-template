@@ -6,20 +6,20 @@ import androidx.navigation.compose.NavHost
 import org.dbtools.android.work.ux.monitor.WorkManagerStatusScreen
 import inc.blubz.fitsync.ui.navigation.NavUriLogger
 import inc.blubz.fitsync.ui.navigation.WorkManagerStatusRoute
-import org.blubz.fitsync.ux.about.AboutRoute
-import org.blubz.fitsync.ux.about.AboutScreen
-import org.blubz.fitsync.ux.about.typography.TypographyRoute
-import org.blubz.fitsync.ux.about.typography.TypographyScreen
-import org.blubz.fitsync.ux.acknowledgement.AcknowledgementScreen
-import org.blubz.fitsync.ux.acknowledgement.AcknowledgmentsRoute
-import org.blubz.fitsync.ux.directory.DirectoryRoute
-import org.blubz.fitsync.ux.directory.DirectoryScreen
-import org.blubz.fitsync.ux.individual.IndividualRoute
-import org.blubz.fitsync.ux.individual.IndividualScreen
-import org.blubz.fitsync.ux.individualedit.IndividualEditRoute
-import org.blubz.fitsync.ux.individualedit.IndividualEditScreen
-import org.blubz.fitsync.ux.settings.SettingsRoute
-import org.blubz.fitsync.ux.settings.SettingsScreen
+import inc.blubz.fitsync.ux.about.AboutRoute
+import inc.blubz.fitsync.ux.about.AboutScreen
+import inc.blubz.fitsync.ux.about.typography.TypographyRoute
+import inc.blubz.fitsync.ux.about.typography.TypographyScreen
+import inc.blubz.fitsync.ux.acknowledgement.AcknowledgementScreen
+import inc.blubz.fitsync.ux.acknowledgement.AcknowledgmentsRoute
+import inc.blubz.fitsync.ux.directory.DirectoryRoute
+import inc.blubz.fitsync.ux.directory.DirectoryScreen
+import inc.blubz.fitsync.ux.individual.IndividualRoute
+import inc.blubz.fitsync.ux.individual.IndividualScreen
+import inc.blubz.fitsync.ux.individualedit.IndividualEditRoute
+import inc.blubz.fitsync.ux.individualedit.IndividualEditScreen
+import inc.blubz.fitsync.ux.settings.SettingsRoute
+import inc.blubz.fitsync.ux.settings.SettingsScreen
 
 @Composable
 fun NavGraph(

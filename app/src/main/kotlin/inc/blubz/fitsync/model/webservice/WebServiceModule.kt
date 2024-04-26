@@ -16,7 +16,7 @@ import okhttp3.Credentials
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import inc.blubz.fitsync.BuildConfig
-import org.blubz.fitsync.model.webservice.KtorClientDefaults.defaultSetup
+import inc.blubz.fitsync.model.webservice.KtorClientDefaults.defaultSetup
 import java.io.UnsupportedEncodingException
 import java.util.concurrent.TimeUnit
 import javax.inject.Named

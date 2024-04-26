@@ -1,6 +1,6 @@
 package inc.blubz.fitsync.model.config
 
-import org.blubz.fitsync.R
+import inc.blubz.fitsync.R
 import javax.inject.Inject
 import javax.inject.Singleton
 

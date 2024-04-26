@@ -8,8 +8,8 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import kotlinx.serialization.json.Json
 import okio.FileSystem
-import org.blubz.fitsync.analytics.Analytics
-import org.blubz.fitsync.analytics.DefaultAnalytics
+import inc.blubz.fitsync.analytics.Analytics
+import inc.blubz.fitsync.analytics.DefaultAnalytics
 import javax.inject.Singleton
 
 @Module

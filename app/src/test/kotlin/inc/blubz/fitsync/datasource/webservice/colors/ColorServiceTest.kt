@@ -9,9 +9,9 @@ import io.ktor.http.HttpStatusCode
 import io.ktor.http.headersOf
 import io.ktor.utils.io.ByteReadChannel
 import kotlinx.coroutines.test.runTest
-import org.blubz.fitsync.datasource.webservice.TestHttpClientProvider
-import org.blubz.fitsync.model.webservice.colors.ColorService
-import org.blubz.fitsync.util.ext.ApiResponse
+import inc.blubz.fitsync.datasource.webservice.TestHttpClientProvider
+import inc.blubz.fitsync.model.webservice.colors.ColorService
+import inc.blubz.fitsync.util.ext.ApiResponse
 import kotlin.test.Test
 
 class ColorServiceTest {

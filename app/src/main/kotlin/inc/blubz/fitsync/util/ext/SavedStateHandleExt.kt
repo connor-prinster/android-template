@@ -2,7 +2,7 @@ package inc.blubz.fitsync.util.ext
 
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.SavedStateHandle
-import org.blubz.fitsync.model.domain.inline.IndividualId
+import inc.blubz.fitsync.model.domain.inline.IndividualId
 import java.net.URLDecoder
 
 @VisibleForTesting

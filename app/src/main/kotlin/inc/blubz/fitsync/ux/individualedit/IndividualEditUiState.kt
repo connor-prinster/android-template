@@ -4,7 +4,7 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
-import org.blubz.fitsync.model.domain.type.IndividualType
+import inc.blubz.fitsync.model.domain.type.IndividualType
 import inc.blubz.fitsync.ui.compose.dialog.DialogUiState
 
 @Suppress("LongParameterList")

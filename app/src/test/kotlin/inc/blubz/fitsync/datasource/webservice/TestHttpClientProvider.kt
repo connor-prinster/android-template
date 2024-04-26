@@ -8,8 +8,8 @@ import io.ktor.client.plugins.logging.Logging
 import io.ktor.client.plugins.resources.Resources
 import io.ktor.client.request.header
 import io.ktor.http.HttpHeaders
-import org.blubz.fitsync.model.webservice.KtorClientDefaults.defaultSetup
-import org.blubz.fitsync.model.webservice.ResponseTimePlugin
+import inc.blubz.fitsync.model.webservice.KtorClientDefaults.defaultSetup
+import inc.blubz.fitsync.model.webservice.ResponseTimePlugin
 
 object TestHttpClientProvider {
     fun getTestClient(

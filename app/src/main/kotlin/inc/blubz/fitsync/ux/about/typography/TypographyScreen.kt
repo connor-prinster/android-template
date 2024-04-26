@@ -13,10 +13,10 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
-import org.blubz.fitsync.R
+import inc.blubz.fitsync.R
 import inc.blubz.fitsync.ui.compose.PreviewDefault
 import inc.blubz.fitsync.ui.theme.AppTheme
-import org.blubz.fitsync.ux.MainAppScaffoldWithNavBar
+import inc.blubz.fitsync.ux.MainAppScaffoldWithNavBar
 
 @Composable
 fun TypographyScreen(

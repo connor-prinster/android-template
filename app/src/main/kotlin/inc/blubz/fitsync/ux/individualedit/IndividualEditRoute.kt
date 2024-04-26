@@ -4,14 +4,14 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.navigation.NamedNavArgument
 import androidx.navigation.NavType
 import androidx.navigation.navArgument
-import org.blubz.fitsync.model.domain.inline.IndividualId
+import inc.blubz.fitsync.model.domain.inline.IndividualId
 import inc.blubz.fitsync.ui.navigation.NavComposeRoute
 import inc.blubz.fitsync.ui.navigation.NavRoute
 import inc.blubz.fitsync.ui.navigation.NavRouteDefinition
 import inc.blubz.fitsync.ui.navigation.RouteUtil
 import inc.blubz.fitsync.ui.navigation.asNavRoute
 import inc.blubz.fitsync.ui.navigation.asNavRouteDefinition
-import org.blubz.fitsync.util.ext.getIndividualId
+import inc.blubz.fitsync.util.ext.getIndividualId
 
 object IndividualEditRoute : NavComposeRoute() {
     private const val ROUTE_BASE = "individualEdit"

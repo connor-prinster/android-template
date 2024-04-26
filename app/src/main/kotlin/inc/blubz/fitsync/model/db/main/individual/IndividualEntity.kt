@@ -5,13 +5,13 @@ import androidx.room.PrimaryKey
 import kotlinx.datetime.Instant
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
-import org.blubz.fitsync.model.domain.inline.Email
-import org.blubz.fitsync.model.domain.inline.FirstName
-import org.blubz.fitsync.model.domain.inline.HouseholdId
-import org.blubz.fitsync.model.domain.inline.IndividualId
-import org.blubz.fitsync.model.domain.inline.LastName
-import org.blubz.fitsync.model.domain.inline.Phone
-import org.blubz.fitsync.model.domain.type.IndividualType
+import inc.blubz.fitsync.model.domain.inline.Email
+import inc.blubz.fitsync.model.domain.inline.FirstName
+import inc.blubz.fitsync.model.domain.inline.HouseholdId
+import inc.blubz.fitsync.model.domain.inline.IndividualId
+import inc.blubz.fitsync.model.domain.inline.LastName
+import inc.blubz.fitsync.model.domain.inline.Phone
+import inc.blubz.fitsync.model.domain.type.IndividualType
 
 @Entity("Individual")
 data class IndividualEntity(

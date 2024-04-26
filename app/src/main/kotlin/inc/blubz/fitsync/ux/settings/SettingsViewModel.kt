@@ -10,9 +10,9 @@ import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.map
 import kotlinx.coroutines.launch
-import org.blubz.fitsync.R
-import org.blubz.fitsync.model.domain.type.DisplayThemeType
-import org.blubz.fitsync.model.repository.SettingsRepository
+import inc.blubz.fitsync.R
+import inc.blubz.fitsync.model.domain.type.DisplayThemeType
+import inc.blubz.fitsync.model.repository.SettingsRepository
 import inc.blubz.fitsync.ui.compose.dialog.DialogUiState
 import inc.blubz.fitsync.ui.compose.dialog.DropDownMenuDialogUiState
 import inc.blubz.fitsync.ui.compose.dialog.InputDialogUiState
@@ -20,7 +20,7 @@ import inc.blubz.fitsync.ui.compose.dialog.RadioDialogDataItem
 import inc.blubz.fitsync.ui.compose.dialog.RadioDialogDataItems
 import inc.blubz.fitsync.ui.compose.dialog.RadioDialogUiState
 import inc.blubz.fitsync.ui.compose.dialog.dismissDialog
-import org.blubz.fitsync.util.ext.stateInDefault
+import inc.blubz.fitsync.util.ext.stateInDefault
 import javax.inject.Inject
 
 @HiltViewModel

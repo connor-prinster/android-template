@@ -1,7 +1,7 @@
 package inc.blubz.fitsync.model.datastore.migration
 
 import androidx.datastore.preferences.core.Preferences
-import org.blubz.fitsync.util.datastore.PreferenceMigration
+import inc.blubz.fitsync.util.datastore.PreferenceMigration
 
 object DevicePreferenceMigration2 : PreferenceMigration(1, 2) {
     override suspend fun migrate(currentData: Preferences): Preferences {

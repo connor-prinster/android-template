@@ -13,15 +13,15 @@ import io.ktor.http.isSuccess
 import io.ktor.resources.Resource
 import okio.FileSystem
 import okio.Path
-import org.blubz.fitsync.model.webservice.colors.dto.ColorDto
-import org.blubz.fitsync.model.webservice.colors.dto.ColorsDto
-import org.blubz.fitsync.model.webservice.colors.dto.ErrorDto
-import org.blubz.fitsync.util.ext.ApiResponse
-import org.blubz.fitsync.util.ext.CacheApiResponse
-import org.blubz.fitsync.util.ext.cacheHeaders
-import org.blubz.fitsync.util.ext.executeSafely
-import org.blubz.fitsync.util.ext.executeSafelyCached
-import org.blubz.fitsync.util.ext.saveBodyToFile
+import inc.blubz.fitsync.model.webservice.colors.dto.ColorDto
+import inc.blubz.fitsync.model.webservice.colors.dto.ColorsDto
+import inc.blubz.fitsync.model.webservice.colors.dto.ErrorDto
+import inc.blubz.fitsync.util.ext.ApiResponse
+import inc.blubz.fitsync.util.ext.CacheApiResponse
+import inc.blubz.fitsync.util.ext.cacheHeaders
+import inc.blubz.fitsync.util.ext.executeSafely
+import inc.blubz.fitsync.util.ext.executeSafelyCached
+import inc.blubz.fitsync.util.ext.saveBodyToFile
 import javax.inject.Inject
 import javax.inject.Singleton
 

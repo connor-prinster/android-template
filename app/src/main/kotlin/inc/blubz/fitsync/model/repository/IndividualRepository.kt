@@ -5,15 +5,15 @@ import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.filterNotNull
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.map
-import org.blubz.fitsync.model.db.main.MainDatabaseWrapper
-import org.blubz.fitsync.model.db.main.directoryitem.DirectoryItemEntityView
-import org.blubz.fitsync.model.db.main.household.HouseholdEntity
-import org.blubz.fitsync.model.db.main.individual.IndividualEntity
-import org.blubz.fitsync.model.domain.Household
-import org.blubz.fitsync.model.domain.Individual
-import org.blubz.fitsync.model.domain.inline.CreatedTime
-import org.blubz.fitsync.model.domain.inline.IndividualId
-import org.blubz.fitsync.model.domain.inline.LastModifiedTime
+import inc.blubz.fitsync.model.db.main.MainDatabaseWrapper
+import inc.blubz.fitsync.model.db.main.directoryitem.DirectoryItemEntityView
+import inc.blubz.fitsync.model.db.main.household.HouseholdEntity
+import inc.blubz.fitsync.model.db.main.individual.IndividualEntity
+import inc.blubz.fitsync.model.domain.Household
+import inc.blubz.fitsync.model.domain.Individual
+import inc.blubz.fitsync.model.domain.inline.CreatedTime
+import inc.blubz.fitsync.model.domain.inline.IndividualId
+import inc.blubz.fitsync.model.domain.inline.LastModifiedTime
 import javax.inject.Inject
 import javax.inject.Singleton
 

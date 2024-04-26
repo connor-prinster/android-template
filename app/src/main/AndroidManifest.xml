@@ -47,7 +47,7 @@
                 <category android:name="android.intent.category.BROWSABLE" />
                 <category android:name="android.intent.category.DEFAULT" />
 
-                <data android:scheme="android-template" />
+                <data android:scheme="fitsync" />
             </intent-filter>
         </activity>
 
@@ -64,19 +64,19 @@
             tools:node="merge"
             >
             <meta-data
-                android:name="org.blubz.fitsync.startup.NotificationInitializer"
+                android:name="inc.blubz.fitsync.startup.NotificationInitializer"
                 android:value="androidx.startup"
                 />
             <meta-data
-                android:name="org.blubz.fitsync.startup.LoggingInitializer"
+                android:name="inc.blubz.fitsync.startup.LoggingInitializer"
                 android:value="androidx.startup"
                 />
             <meta-data
-                android:name="org.blubz.fitsync.startup.AppUpgradeInitializer"
+                android:name="inc.blubz.fitsync.startup.AppUpgradeInitializer"
                 android:value="androidx.startup"
                 />
             <meta-data
-                android:name="org.blubz.fitsync.startup.RemoteConfigInitializer"
+                android:name="inc.blubz.fitsync.startup.RemoteConfigInitializer"
                 android:value="androidx.startup"
                 />
         </provider>

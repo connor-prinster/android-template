@@ -17,12 +17,12 @@ import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
 import inc.blubz.fitsync.BuildConfig
-import org.blubz.fitsync.R
+import inc.blubz.fitsync.R
 import inc.blubz.fitsync.ui.compose.appbar.AppBarMenu
 import inc.blubz.fitsync.ui.compose.appbar.AppBarMenuItem
 import inc.blubz.fitsync.ui.navigation.HandleNavigation
 import inc.blubz.fitsync.ui.theme.AppTheme
-import org.blubz.fitsync.ux.MainAppScaffoldWithNavBar
+import inc.blubz.fitsync.ux.MainAppScaffoldWithNavBar
 
 @Composable
 fun AboutScreen(

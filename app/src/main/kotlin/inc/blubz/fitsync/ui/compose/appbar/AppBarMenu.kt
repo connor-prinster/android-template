@@ -27,7 +27,7 @@ import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.DpOffset
 import androidx.compose.ui.unit.dp
-import org.blubz.fitsync.R
+import inc.blubz.fitsync.R
 import inc.blubz.fitsync.ui.compose.menu.OverflowMenuItem
 import inc.blubz.fitsync.ui.compose.menu.OverflowMenuItemsContent
 

@@ -34,12 +34,12 @@ import androidx.compose.ui.unit.IntSize
 import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
-import org.blubz.fitsync.R
+import inc.blubz.fitsync.R
 import inc.blubz.fitsync.ui.compose.util.WindowSize
 import inc.blubz.fitsync.ui.compose.util.rememberWindowSize
-import org.blubz.fitsync.util.ext.requireActivity
-import org.blubz.fitsync.ux.main.MainViewModel
-import org.blubz.fitsync.ux.main.NavBarItem
+import inc.blubz.fitsync.util.ext.requireActivity
+import inc.blubz.fitsync.ux.main.MainViewModel
+import inc.blubz.fitsync.ux.main.NavBarItem
 
 @Composable
 fun MainAppScaffoldWithNavBar(

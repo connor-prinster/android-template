@@ -35,7 +35,7 @@ import androidx.compose.ui.text.input.PasswordVisualTransformation
 import androidx.compose.ui.text.input.TextFieldValue
 import androidx.compose.ui.text.input.VisualTransformation
 import androidx.compose.ui.tooling.preview.Preview
-import org.blubz.fitsync.R
+import inc.blubz.fitsync.R
 
 @Composable
 fun DayNightPasswordTextField(

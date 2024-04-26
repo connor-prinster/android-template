@@ -2,7 +2,7 @@ package inc.blubz.fitsync.model.db.main.household
 
 import androidx.room.ColumnInfo
 import androidx.room.Relation
-import org.blubz.fitsync.model.db.main.individual.IndividualEntity
+import inc.blubz.fitsync.model.db.main.individual.IndividualEntity
 
 data class HouseholdMembers(
     var id: String = "",

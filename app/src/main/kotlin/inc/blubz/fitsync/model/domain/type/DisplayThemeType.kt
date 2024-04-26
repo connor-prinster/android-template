@@ -1,7 +1,7 @@
 package inc.blubz.fitsync.model.domain.type
 
 import android.content.Context
-import org.blubz.fitsync.R
+import inc.blubz.fitsync.R
 
 enum class DisplayThemeType(private val textResId: Int) {
     SYSTEM_DEFAULT(R.string.system_default),

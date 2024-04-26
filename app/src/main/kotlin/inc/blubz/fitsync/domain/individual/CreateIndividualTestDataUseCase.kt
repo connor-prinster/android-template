@@ -4,14 +4,14 @@ import kotlinx.coroutines.CoroutineDispatcher
 import kotlinx.coroutines.withContext
 import kotlinx.datetime.LocalDate
 import kotlinx.datetime.LocalTime
-import org.blubz.fitsync.inject.DefaultDispatcher
-import org.blubz.fitsync.model.domain.Household
-import org.blubz.fitsync.model.domain.Individual
-import org.blubz.fitsync.model.domain.inline.FirstName
-import org.blubz.fitsync.model.domain.inline.LastName
-import org.blubz.fitsync.model.domain.inline.Phone
-import org.blubz.fitsync.model.domain.type.IndividualType
-import org.blubz.fitsync.model.repository.IndividualRepository
+import inc.blubz.fitsync.inject.DefaultDispatcher
+import inc.blubz.fitsync.model.domain.Household
+import inc.blubz.fitsync.model.domain.Individual
+import inc.blubz.fitsync.model.domain.inline.FirstName
+import inc.blubz.fitsync.model.domain.inline.LastName
+import inc.blubz.fitsync.model.domain.inline.Phone
+import inc.blubz.fitsync.model.domain.type.IndividualType
+import inc.blubz.fitsync.model.repository.IndividualRepository
 import javax.inject.Inject
 
 class CreateIndividualTestDataUseCase

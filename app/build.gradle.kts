@@ -22,7 +22,7 @@ plugins {
 }
 
 android {
-    namespace = "org.blubz.template"
+    namespace = "inc.blubz.fitsync"
 
     compileSdk = AppInfo.AndroidSdk.COMPILE
 
@@ -35,7 +35,7 @@ android {
         versionName = AppInfo.Version.NAME
 
         buildConfigField("String", "BUILD_NUMBER", "\"${System.getProperty("BUILD_NUMBER")}\"")
-        buildConfigField("String", "USER_AGENT_APP_NAME", "\"AndroidTemplate\"")
+        buildConfigField("String", "USER_AGENT_APP_NAME", "\"FitSync\"")
 
         room {
             schemaDirectory("$projectDir/schema")
@@ -147,11 +147,11 @@ android {
         }
     }
 
-    // read the "androidTemplateServiceCredentialsFile" from Gradle properties
-    val androidTemplateServiceCredentialsFile: String? by project
+    // read the "fitsyncServiceCredentialsFile" from Gradle properties
+    val fitsyncServiceCredentialsFile: String? by project
 
     val buildServiceCredentialsFile = "app-distribution.json" // matches filename in Github Actions yml
-    val serviceCredentialsFileFromGradle = androidTemplateServiceCredentialsFile
+    val serviceCredentialsFileFromGradle = fitsyncServiceCredentialsFile
     val firebaseServiceCredentialsFile: String? = if (File(buildServiceCredentialsFile).exists()) buildServiceCredentialsFile else serviceCredentialsFileFromGradle
     val firebaseGroups = "mobile-dev-team, mobile-qa-team"
     val firebaseReleaseNotesFile = "commit-changelog.txt"
@@ -331,7 +331,7 @@ koverReport {
                 "*codegen*",
 
                 // App Specific
-                "org.blubz.template.ui",
+                "inc.blubz.fitsync.ui",
             )
 
             classes(

@@ -2,8 +2,8 @@ package inc.blubz.fitsync.ux.directory
 
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow
-import org.blubz.fitsync.model.db.main.directoryitem.DirectoryItemEntityView
-import org.blubz.fitsync.model.domain.inline.IndividualId
+import inc.blubz.fitsync.model.db.main.directoryitem.DirectoryItemEntityView
+import inc.blubz.fitsync.model.domain.inline.IndividualId
 
 data class DirectoryUiState(
     // Data
