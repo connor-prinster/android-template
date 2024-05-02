@@ -3,7 +3,6 @@ package inc.blubz.fitsync.ux
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
-import org.dbtools.android.work.ux.monitor.WorkManagerStatusScreen
 import inc.blubz.fitsync.ui.navigation.NavUriLogger
 import inc.blubz.fitsync.ui.navigation.WorkManagerStatusRoute
 import inc.blubz.fitsync.ux.about.AboutRoute
@@ -12,14 +11,13 @@ import inc.blubz.fitsync.ux.about.typography.TypographyRoute
 import inc.blubz.fitsync.ux.about.typography.TypographyScreen
 import inc.blubz.fitsync.ux.acknowledgement.AcknowledgementScreen
 import inc.blubz.fitsync.ux.acknowledgement.AcknowledgmentsRoute
-import inc.blubz.fitsync.ux.directory.DirectoryRoute
-import inc.blubz.fitsync.ux.directory.DirectoryScreen
-import inc.blubz.fitsync.ux.individual.IndividualRoute
-import inc.blubz.fitsync.ux.individual.IndividualScreen
-import inc.blubz.fitsync.ux.individualedit.IndividualEditRoute
-import inc.blubz.fitsync.ux.individualedit.IndividualEditScreen
+import inc.blubz.fitsync.ux.exercise.ExerciseRoute
+import inc.blubz.fitsync.ux.exercise.IndividualScreen
+import inc.blubz.fitsync.ux.home.HomeRoute
+import inc.blubz.fitsync.ux.home.HomeScreen
 import inc.blubz.fitsync.ux.settings.SettingsRoute
 import inc.blubz.fitsync.ux.settings.SettingsScreen
+import org.dbtools.android.work.ux.monitor.WorkManagerStatusScreen
 
 @Composable
 fun NavGraph(
@@ -30,11 +28,10 @@ fun NavGraph(
 
     NavHost(
         navController = navController,
-        startDestination = DirectoryRoute.routeDefinition.value
+        startDestination = HomeRoute.routeDefinition.value
     ) {
-        DirectoryRoute.addNavigationRoute(this) { DirectoryScreen(navController) }
-        IndividualRoute.addNavigationRoute(this) { IndividualScreen(navController) }
-        IndividualEditRoute.addNavigationRoute(this) { IndividualEditScreen(navController) }
+        ExerciseRoute.addNavigationRoute(this) { IndividualScreen(navController) }
+        HomeRoute.addNavigationRoute(this) { HomeScreen(navController = navController) }
 
         SettingsRoute.addNavigationRoute(this) { SettingsScreen(navController) }
         AboutRoute.addNavigationRoute(this) { AboutScreen(navController) }

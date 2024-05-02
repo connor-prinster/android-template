@@ -2,6 +2,7 @@
 
 package inc.blubz.fitsync.ui.theme
 
+import android.app.Activity
 import android.os.Build
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material3.MaterialTheme
@@ -10,61 +11,13 @@ import androidx.compose.material3.dynamicDarkColorScheme
 import androidx.compose.material3.dynamicLightColorScheme
 import androidx.compose.material3.lightColorScheme
 import androidx.compose.runtime.Composable
-import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.runtime.Immutable
-import androidx.compose.runtime.staticCompositionLocalOf
+import androidx.compose.runtime.SideEffect
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.platform.LocalContext
-
-object AppTheme {
-    val extendedColors: ExtendedColorScheme
-        @Composable get() = LocalAppColors.current
-}
-
-@Composable
-fun AppTheme(
-    darkTheme: Boolean = isSystemInDarkTheme(),
-    dynamicTheme: Boolean = false,
-    content: @Composable () -> Unit,
-) {
-    val colorScheme = when {
-        dynamicTheme && Build.VERSION.SDK_INT >= 31 -> if (darkTheme) dynamicDarkColorScheme(LocalContext.current) else dynamicLightColorScheme(LocalContext.current)
-        else -> if (darkTheme) darkScheme else lightScheme
-    }
-
-    val extendedAppColors = if (darkTheme) extendedDark else extendedLight
-
-    CompositionLocalProvider(
-        LocalAppColors provides extendedAppColors,
-    ) {
-        MaterialTheme(
-            colorScheme = colorScheme,
-            content = content,
-        )
-    }
-}
-
-private val LocalAppColors = staticCompositionLocalOf<ExtendedColorScheme> {
-    error("No AppColorPalette provided")
-}
-
-@Immutable
-data class ExtendedColorScheme(
-    val customColorA: ColorFamily,
-    val customColorB: ColorFamily,
-)
-
-@Immutable
-data class ColorFamily(
-    val color: Color,
-    val onColor: Color,
-    val colorContainer: Color,
-    val onColorContainer: Color
-)
-
-val unspecifiedScheme = ColorFamily(
-    Color.Unspecified, Color.Unspecified, Color.Unspecified, Color.Unspecified
-)
+import androidx.compose.ui.platform.LocalView
+import androidx.core.view.WindowCompat
 
 private val lightScheme = lightColorScheme(
     primary = primaryLight,
@@ -294,92 +247,46 @@ private val highContrastDarkColorScheme = darkColorScheme(
     surfaceContainerHighest = surfaceContainerHighestDarkHighContrast,
 )
 
-val extendedLight = ExtendedColorScheme(
-    customColorA = ColorFamily(
-        customColorALight,
-        onCustomColorALight,
-        customColorAContainerLight,
-        onCustomColorAContainerLight,
-    ),
-    customColorB = ColorFamily(
-        customColorBLight,
-        onCustomColorBLight,
-        customColorBContainerLight,
-        onCustomColorBContainerLight,
-    ),
+@Immutable
+data class ColorFamily(
+    val color: Color,
+    val onColor: Color,
+    val colorContainer: Color,
+    val onColorContainer: Color
 )
 
-val extendedDark = ExtendedColorScheme(
-    customColorA = ColorFamily(
-        customColorADark,
-        onCustomColorADark,
-        customColorAContainerDark,
-        onCustomColorAContainerDark,
-    ),
-    customColorB = ColorFamily(
-        customColorBDark,
-        onCustomColorBDark,
-        customColorBContainerDark,
-        onCustomColorBContainerDark,
-    ),
+val unspecified_scheme = ColorFamily(
+    Color.Unspecified, Color.Unspecified, Color.Unspecified, Color.Unspecified
 )
 
-val extendedLightMediumContrast = ExtendedColorScheme(
-    customColorA = ColorFamily(
-        customColorALightMediumContrast,
-        onCustomColorALightMediumContrast,
-        customColorAContainerLightMediumContrast,
-        onCustomColorAContainerLightMediumContrast,
-    ),
-    customColorB = ColorFamily(
-        customColorBLightMediumContrast,
-        onCustomColorBLightMediumContrast,
-        customColorBContainerLightMediumContrast,
-        onCustomColorBContainerLightMediumContrast,
-    ),
-)
+@Composable
+fun AppTheme(
+    darkTheme: Boolean = isSystemInDarkTheme(),
+    // Dynamic color is available on Android 12+
+    dynamicColor: Boolean = true,
+    content: @Composable() () -> Unit
+) {
+    val colorScheme = when {
+        dynamicColor && Build.VERSION.SDK_INT >= Build.VERSION_CODES.S -> {
+            val context = LocalContext.current
+            if (darkTheme) dynamicDarkColorScheme(context) else dynamicLightColorScheme(context)
+        }
 
-val extendedLightHighContrast = ExtendedColorScheme(
-    customColorA = ColorFamily(
-        customColorALightHighContrast,
-        onCustomColorALightHighContrast,
-        customColorAContainerLightHighContrast,
-        onCustomColorAContainerLightHighContrast,
-    ),
-    customColorB = ColorFamily(
-        customColorBLightHighContrast,
-        onCustomColorBLightHighContrast,
-        customColorBContainerLightHighContrast,
-        onCustomColorBContainerLightHighContrast,
-    ),
-)
+        darkTheme -> darkScheme
+        else -> lightScheme
+    }
+    val view = LocalView.current
+    if (!view.isInEditMode) {
+        SideEffect {
+            val window = (view.context as Activity).window
+            window.statusBarColor = colorScheme.primary.toArgb()
+            WindowCompat.getInsetsController(window, view).isAppearanceLightStatusBars = darkTheme
+        }
+    }
 
-val extendedDarkMediumContrast = ExtendedColorScheme(
-    customColorA = ColorFamily(
-        customColorADarkMediumContrast,
-        onCustomColorADarkMediumContrast,
-        customColorAContainerDarkMediumContrast,
-        onCustomColorAContainerDarkMediumContrast,
-    ),
-    customColorB = ColorFamily(
-        customColorBDarkMediumContrast,
-        onCustomColorBDarkMediumContrast,
-        customColorBContainerDarkMediumContrast,
-        onCustomColorBContainerDarkMediumContrast,
-    ),
-)
-
-val extendedDarkHighContrast = ExtendedColorScheme(
-    customColorA = ColorFamily(
-        customColorADarkHighContrast,
-        onCustomColorADarkHighContrast,
-        customColorAContainerDarkHighContrast,
-        onCustomColorAContainerDarkHighContrast,
-    ),
-    customColorB = ColorFamily(
-        customColorBDarkHighContrast,
-        onCustomColorBDarkHighContrast,
-        customColorBContainerDarkHighContrast,
-        onCustomColorBContainerDarkHighContrast,
-    ),
-)
+    MaterialTheme(
+        colorScheme = colorScheme,
+        typography = MaterialTheme.typography,
+        content = content
+    )
+}

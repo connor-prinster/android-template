@@ -8,7 +8,7 @@ import androidx.compose.ui.test.onNodeWithTag
 import androidx.compose.ui.test.onNodeWithText
 import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performTextReplacement
-import inc.blubz.fitsync.ux.individual.IndividualEditScreenFields
+import inc.blubz.fitsync.ux.exercise.IndividualEditScreenFields
 import inc.blubz.fitsync.ux.main.MainActivity
 import inc.blubz.fitsync.ux.main.MainViewModel
 import kotlinx.coroutines.runBlocking

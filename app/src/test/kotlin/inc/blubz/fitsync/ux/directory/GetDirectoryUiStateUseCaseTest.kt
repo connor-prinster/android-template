@@ -12,7 +12,7 @@ import kotlinx.coroutines.test.runTest
 import inc.blubz.fitsync.ux.mockIndividualRepository
 import inc.blubz.fitsync.model.domain.inline.IndividualId
 import inc.blubz.fitsync.ui.navigation.NavigationAction
-import inc.blubz.fitsync.ux.individual.IndividualRoute
+import inc.blubz.fitsync.ux.exercise.ExerciseRoute
 import inc.blubz.fitsync.ux.individualedit.IndividualEditRoute
 import inc.blubz.fitsync.ux.settings.SettingsRoute
 import kotlin.test.Test
@@ -36,7 +36,7 @@ class GetDirectoryUiStateUseCaseTest {
             assertThat(navigationActionTurbine.awaitItem()).isEqualTo(NavigationAction.Navigate(IndividualEditRoute.createRoute()))
 
             uiState.onIndividualClicked(IndividualId("1"))
-            assertThat(navigationActionTurbine.awaitItem()).isEqualTo(NavigationAction.Navigate(IndividualRoute.createRoute(IndividualId("1"))))
+            assertThat(navigationActionTurbine.awaitItem()).isEqualTo(NavigationAction.Navigate(ExerciseRoute.createRoute(IndividualId("1"))))
 
             uiState.onSettingsClicked()
             assertThat(navigationActionTurbine.awaitItem()).isEqualTo(NavigationAction.Navigate(SettingsRoute.createRoute()))

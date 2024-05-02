@@ -10,6 +10,6 @@ class MainMigration2: Migration(1, 2) {
         // ONLY views are changed
 
         // drop and recreate views
-        database.recreateAllViews(MainDatabase.DATABASE_VIEW_QUERIES)
+//        database.recreateAllViews(MainDatabase.DATABASE_VIEW_QUERIES)
     }
 }

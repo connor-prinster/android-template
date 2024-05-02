@@ -2,7 +2,7 @@ package inc.blubz.fitsync.util.ext
 
 import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.SavedStateHandle
-import inc.blubz.fitsync.model.domain.inline.IndividualId
+import inc.blubz.fitsync.model.domain.inline.ExerciseId
 import java.net.URLDecoder
 
 @VisibleForTesting
@@ -27,5 +27,5 @@ fun SavedStateHandle.getDecodedString(key: String): String? = get<String>(key)?.
 fun SavedStateHandle.requireDecodedString(key: String): String = URLDecoder.decode(requireNotNull(get<String>(key)) { createSaveStateErrorMessage(key) }, "utf-8")
 
 // custom extension for this app
-fun SavedStateHandle.getIndividualId(key: String): IndividualId? = getValueClass<String, IndividualId>(key) { IndividualId(it) }
-fun SavedStateHandle.requireIndividualId(key: String): IndividualId = requireValueClass<String, IndividualId>(key) { IndividualId(it) }
+fun SavedStateHandle.getExerciseId(key: String): ExerciseId? = getValueClass<String, ExerciseId>(key) { ExerciseId(it) }
+fun SavedStateHandle.requireExerciseId(key: String): ExerciseId = requireValueClass<String, ExerciseId>(key) { ExerciseId(it) }

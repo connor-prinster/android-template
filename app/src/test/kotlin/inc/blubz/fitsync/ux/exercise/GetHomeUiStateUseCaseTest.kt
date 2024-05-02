@@ -1,4 +1,4 @@
-package inc.blubz.fitsync.ux.individual
+package inc.blubz.fitsync.ux.exercise
 
 import app.cash.turbine.turbineScope
 import assertk.assertThat
@@ -17,7 +17,7 @@ import inc.blubz.fitsync.ux.individualedit.IndividualEditRoute
 import inc.blubz.fitsync.ux.mockIndividualRepository
 import kotlin.test.Test
 
-class GetIndividualUiStateUseCaseTest {
+class GetHomeUiStateUseCaseTest {
     @Test
     fun testNavigation() = runTest {
         turbineScope {

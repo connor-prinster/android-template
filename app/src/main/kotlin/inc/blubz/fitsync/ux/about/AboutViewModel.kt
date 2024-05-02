@@ -5,18 +5,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import co.touchlab.kermit.Logger
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.flow.MutableStateFlow
-import kotlinx.coroutines.flow.StateFlow
-import kotlinx.coroutines.flow.asStateFlow
-import kotlinx.coroutines.launch
-import okio.FileSystem
-import okio.Path.Companion.toOkioPath
-import inc.blubz.fitsync.domain.individual.CreateIndividualLargeTestDataUseCase
-import inc.blubz.fitsync.domain.individual.CreateIndividualTestDataUseCase
 import inc.blubz.fitsync.model.config.RemoteConfig
-import inc.blubz.fitsync.model.domain.inline.FirstName
-import inc.blubz.fitsync.model.repository.IndividualRepository
 import inc.blubz.fitsync.model.webservice.colors.ColorService
 import inc.blubz.fitsync.model.webservice.colors.dto.ColorsDto
 import inc.blubz.fitsync.ui.navigation.ViewModelNav
@@ -31,18 +20,22 @@ import inc.blubz.fitsync.util.ext.readText
 import inc.blubz.fitsync.ux.about.typography.TypographyRoute
 import inc.blubz.fitsync.ux.acknowledgement.AcknowledgmentsRoute
 import inc.blubz.fitsync.work.WorkScheduler
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.StateFlow
+import kotlinx.coroutines.flow.asStateFlow
+import kotlinx.coroutines.launch
+import okio.FileSystem
+import okio.Path.Companion.toOkioPath
 import javax.inject.Inject
 
 @HiltViewModel
 class AboutViewModel
 @Inject constructor(
     private val application: Application,
-    private val individualRepository: IndividualRepository,
     private val colorService: ColorService,
     private val workScheduler: WorkScheduler,
     private val remoteConfig: RemoteConfig,
-    private val createIndividualTestDataUseCase: CreateIndividualTestDataUseCase,
-    private val createIndividualLargeTestDataUseCase: CreateIndividualLargeTestDataUseCase,
     private val fileSystem: FileSystem
 ) : ViewModel(), ViewModelNav by ViewModelNavImpl() {
 
@@ -55,10 +48,7 @@ class AboutViewModel
         testSaveQueryWebServiceCall = { testSaveQueryWebServiceCall() },
         workManagerSimpleTest = { workManagerSimpleTest() },
         workManagerSyncTest = { workManagerSyncTest() },
-        testTableChange = { testTableChange() },
         licensesClicked = { navigate(AcknowledgmentsRoute.createRoute()) },
-        createSampleData = { createSampleData() },
-        createLargeSampleData = { createLargeSampleData() },
         m3TypographyClicked = { navigate(TypographyRoute.createRoute()) }
     )
 
@@ -130,39 +120,5 @@ class AboutViewModel
         delay(3000)
 
         workScheduler.scheduleSync()
-    }
-
-    private fun testTableChange() = viewModelScope.launch {
-        // Sample tests
-        if (individualRepository.getIndividualCount() == 0) {
-            Logger.e { "No data.. cannot perform test" }
-            return@launch
-        }
-
-        // Make some changes
-        val originalName: FirstName?
-
-        val individualList = individualRepository.getAllIndividuals()
-        if (individualList.isNotEmpty()) {
-            val individual = individualList[0]
-            originalName = individual.firstName
-            Logger.i { "ORIGINAL NAME = $originalName" }
-
-            // change name
-            individualRepository.saveIndividual(individual.copy(firstName = FirstName("Bobby")))
-
-            // restore name
-            individualRepository.saveIndividual(individual.copy(firstName = originalName))
-        } else {
-            Logger.e { "Cannot find individual" }
-        }
-    }
-
-    private fun createSampleData() = viewModelScope.launch {
-        createIndividualTestDataUseCase()
-    }
-
-    private fun createLargeSampleData() = viewModelScope.launch {
-        createIndividualLargeTestDataUseCase()
     }
 }

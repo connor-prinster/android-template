@@ -1,13 +1,9 @@
 package inc.blubz.fitsync.ux.main
 
-import androidx.annotation.VisibleForTesting
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import co.touchlab.kermit.Logger
 import dagger.hilt.android.lifecycle.HiltViewModel
-import kotlinx.coroutines.flow.combine
-import kotlinx.coroutines.launch
-import inc.blubz.fitsync.domain.individual.CreateIndividualTestDataUseCase
 import inc.blubz.fitsync.model.domain.type.DisplayThemeType
 import inc.blubz.fitsync.model.repository.SettingsRepository
 import inc.blubz.fitsync.ui.navigation.DefaultNavBarConfig
@@ -15,6 +11,8 @@ import inc.blubz.fitsync.ui.navigation.ViewModelNavBar
 import inc.blubz.fitsync.ui.navigation.ViewModelNavBarImpl
 import inc.blubz.fitsync.util.ext.stateInDefault
 import inc.blubz.fitsync.work.WorkScheduler
+import kotlinx.coroutines.flow.combine
+import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
@@ -22,12 +20,12 @@ class MainViewModel
 @Inject constructor(
     private val workScheduler: WorkScheduler,
     settingsRepository: SettingsRepository,
-    private val createIndividualTestDataUseCase: CreateIndividualTestDataUseCase
-) : ViewModel(), ViewModelNavBar<NavBarItem> by ViewModelNavBarImpl(NavBarItem.PEOPLE, DefaultNavBarConfig(NavBarItem.getNavBarItemRouteMap())) {
+) : ViewModel(), ViewModelNavBar<NavBarItem> by ViewModelNavBarImpl(NavBarItem.ABOUT, DefaultNavBarConfig(NavBarItem.getNavBarItemRouteMap())) {
     val uiState = MainUiState(
         selectedAppThemeFlow = combine(
             settingsRepository.themeFlow.stateInDefault(viewModelScope, null),
-            settingsRepository.dynamicThemeFlow.stateInDefault(viewModelScope, null)) { displayThemeType, dynamicTheme ->
+            settingsRepository.dynamicThemeFlow.stateInDefault(viewModelScope, null)
+        ) { displayThemeType, dynamicTheme ->
             SelectedAppTheme(displayThemeType ?: DisplayThemeType.SYSTEM_DEFAULT, dynamicTheme ?: false)
         }.stateInDefault(viewModelScope, null)
     )
@@ -48,11 +46,6 @@ class MainViewModel
         Logger.i { "Startup finished" }
 
         startupComplete = true
-    }
-
-    @VisibleForTesting
-    suspend fun createSampleData() {
-        createIndividualTestDataUseCase()
     }
 }
 

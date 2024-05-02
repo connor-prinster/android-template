@@ -2,11 +2,9 @@ package inc.blubz.fitsync.model.db.main.migration
 
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
-import org.dbtools.android.room.ext.createAllViews
 import org.dbtools.android.room.ext.dropAllViews
-import inc.blubz.fitsync.model.db.main.MainDatabase
 
-class MainMigration3: Migration(2, 3) {
+class MainMigration3 : Migration(2, 3) {
     override fun migrate(database: SupportSQLiteDatabase) {
         // BOTH views and tables are changed
 
@@ -16,6 +14,6 @@ class MainMigration3: Migration(2, 3) {
         // do other database migrations here
 
         // recreate views
-        database.createAllViews(MainDatabase.DATABASE_VIEW_QUERIES)
+//        database.createAllViews(MainDatabase.DATABASE_VIEW_QUERIES)
     }
 }

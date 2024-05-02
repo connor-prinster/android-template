@@ -1,32 +1,30 @@
 package inc.blubz.fitsync.model.domain.inline
 
+import inc.blubz.fitsync.model.domain.type.Feeling
 import kotlinx.datetime.Instant
+import java.util.UUID
 
 @JvmInline
-value class IndividualId(val value: String) {
+value class ExerciseId(val value: String = UUID.randomUUID().toString()) {
     init {
-        require(value.isNotBlank()) { "IndividualId cannot have a empty value" }
+        require(value.isNotBlank()) { "ExerciseId cannot have a empty value" }
     }
 }
 
 @JvmInline
-value class HouseholdId(val value: String) {
-    init {
-        require(value.isNotBlank()) { "HouseholdId cannot have a empty value" }
-    }
-}
-
-@JvmInline
-value class FirstName(val value: String)
+value class ExerciseName(val value: String)
 
 @JvmInline
 value class LastName(val value: String)
 
 @JvmInline
-value class Phone(val value: String)
+value class Sets(val value: Int)
 
 @JvmInline
-value class Email(val value: String)
+value class Reps(val value: Int)
+
+@JvmInline
+value class Feeling(val value: Feeling)
 
 @JvmInline
 value class CreatedTime(val value: Instant)

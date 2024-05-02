@@ -16,12 +16,10 @@ import androidx.compose.ui.unit.dp
 import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.navigation.NavController
-import inc.blubz.fitsync.BuildConfig
 import inc.blubz.fitsync.R
 import inc.blubz.fitsync.ui.compose.appbar.AppBarMenu
 import inc.blubz.fitsync.ui.compose.appbar.AppBarMenuItem
 import inc.blubz.fitsync.ui.navigation.HandleNavigation
-import inc.blubz.fitsync.ui.theme.AppTheme
 import inc.blubz.fitsync.ux.MainAppScaffoldWithNavBar
 
 @Composable
@@ -92,7 +90,7 @@ private fun RestServicesStatus(uiState: AboutUiState) {
 
     Row {
         Text("Rest Services Enabled: ")
-        Text(text = restServicesEnabled.toString(), color = AppTheme.extendedColors.customColorA.color)
+        Text(text = restServicesEnabled.toString(), color = MaterialTheme.colorScheme.primary)
     }
 }
 
